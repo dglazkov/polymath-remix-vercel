@@ -1,4 +1,8 @@
-import polymathHostConfig from "~/host.SECRET.json";
+// import polymathHostConfig from "~/host.SECRET.json";
+
+const polymathHostConfig = {
+  clientOptions: {}
+}
 
 export { polymathHostConfig };
 

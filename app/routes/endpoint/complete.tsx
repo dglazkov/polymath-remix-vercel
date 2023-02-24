@@ -21,13 +21,9 @@ export async function action({ request }: ActionArgs) {
   }
 
   // TODO: get these settings from a config file and switch to configuration system when ready
-  let clientOptions: any = polymathHostConfig.client_options;
-  clientOptions.apiKey =
-    polymathHostConfig.default_api_key || process.env.OPENAI_API_KEY;
-
-  if (servers.length > 0) {
-    if (!clientOptions.servers) clientOptions.servers = [];
-    clientOptions.servers = clientOptions.servers.concat(servers);
+  let clientOptions: any = {
+    apiKey: process.env.OPENAI_API_KEY,
+    servers: ['https://polymath.glazkov.com'],
   }
   let client = new Polymath(clientOptions);
 
