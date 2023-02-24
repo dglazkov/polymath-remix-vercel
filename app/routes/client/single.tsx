@@ -158,6 +158,7 @@ export default function ClientSingle(): JSX.Element {
         <input type="hidden" name="omit" value="embedding" />
         <div>
           <div className="relative mt-1 rounded-md shadow-sm">
+            <input type="hidden" name="server" value="https://polymath.glazkov.com" />
             <input
               type="text"
               name="query"
